@@ -62,6 +62,7 @@ class Hangman
 
   def restart_game
     puts 'Do you want to play again? y/n'
+    puts '*********************************************************'
     try_again = gets.chomp.downcase
     case try_again
     when 'y'
@@ -107,6 +108,7 @@ class Hangman
       end
     end
     @guesses -= 1 if input_get(@inp) == false
+    puts '*********************************************************'
   end
 
   def load_game
